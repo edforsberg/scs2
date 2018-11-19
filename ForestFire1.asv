@@ -4,7 +4,7 @@ timeSteps = 1000;
 areaSize = 128;
 
 f = 0.01;
-p = 0.005;
+p = 0.05;
 
 area = zeros(areaSize, areaSize);
 mapTree = [1 1 1; 0 1 0];
@@ -27,8 +27,7 @@ while(t<timeSteps)
     if(sum(area(:) == 2) ~= 0)
         colormap(mapBurn);
         set(plot1, 'CData', area);
-        pause
-        colormap(mapTree);
+        colormap(mapTrees);
     end
     
     

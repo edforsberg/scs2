@@ -1,0 +1,31 @@
+function area = BurnDown(area, f)
+
+if (rand<f)
+    
+    burningTrees = [randi(size(arean,1)), randi(size(area,2))];
+    
+    while(numel(burningTrees)>0)
+        
+        tempburningTrees = [];
+        
+        for i = 1:size(burningTrees,1)
+            if(area(burningTrees(i,:)) == 1)
+                tree = burningTrees(i,:);
+                area(tree) = 2;
+                
+                if(area(tree(1,1)+1, tree(1,2)) == 1)
+                    tempburningTrees = [tempburningTrees; [tree(1,1)+1, tree(1,2)]];
+                end
+                if(area(tree(1,1), tree(1,2)+1) == 1)
+                    tempburningTrees = [tempburningTrees; [tree(1,1), tree(1,2)+1]];
+                end
+                if(area(tree(1,1)-1, tree(1,2)) == 1)
+                    tempburningTrees = [tempburningTrees; [tree(1,1)-1, tree(1,2)]];
+                end
+                if(area(tree(1,1), tree(1,2)-1) == 1)
+                    tempburningTrees = [tempburningTrees; [tree(1,1), tree(1,2)-1]];
+                end
+            end
+        end
+    end
+    
