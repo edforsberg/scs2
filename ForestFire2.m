@@ -1,6 +1,9 @@
 %forestFire 1
+clear all
+clc
+clf
 
-nrFires = 1000;
+nrFires = 100;
 areaSize = 128;
 
 fireSizeVec = [];
@@ -38,19 +41,13 @@ for i = 1:numel(densityVec)
     
     while noFire
         randForest = BurnDown(randForest, 1);
-        if(sum(randForest == 1) ~= 0)
+        if(sum(randForest(:) == 1) ~= 0)
             noFire = false;
             randFireVec = [randFireVec; sum(randForest(:) == 1)];
         end
     end
 end
-%
-%     burntTrees = StartFire(areaSize, forest); 
-%     randFireVec = [randFireVec; burntTrees]; 
 
-
-
-%%
 
 randFireVec = randFireVec./areaSize^2;
 randFireVec = sort(randFireVec); 
