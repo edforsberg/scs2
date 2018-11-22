@@ -1,0 +1,45 @@
+function forest = RandomForrest(areaSize, densityVec, index) 
+
+randDensity = 0; 
+targetDensity = densityVec(index); 
+
+while (randDensity < targetDensity)
+    
+    
+    
+    
+    
+end
+
+
+
+
+end
+
+
+% 
+% forest = rand(areaSize); 
+% forest(forest > densityVec(index)) = 0;
+% forest(forest > 0) = 2;
+
+
+
+
+
+
+% nrOfTrees = ceil(densityVec(index)*areaSize^2); 
+% numVec = randperm(areaSize^2); 
+% indices = numVec(1:nrOfTrees); 
+% 
+% forest = zeros(areaSize); 
+% 
+% for t = 1:nrOfTrees
+%     
+% i = floor(indices(t)/areaSize); 
+% j = floor(indices(t)-areaSize*i)+1;
+% i = i+1;
+% 
+% 
+% forest(i,j) = 2;
+% 
+% end

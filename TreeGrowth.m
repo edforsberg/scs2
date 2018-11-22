@@ -1,10 +1,10 @@
-function area = TreeGrowth(area, p)
+function forest = TreeGrowth(forest, p)
 
-for i = 1:size(area,1)
-    for j = 1:size(area,2)
+for i = 1:size(forest,1)
+    for j = 1:size(forest,2)
         
         if (rand<p)
-            area(i,j) = 2;
+            forest(i,j) = 2;
         end
     end
 end
