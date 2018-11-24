@@ -2,7 +2,7 @@
 clf
 
 nrFires = 1000;
-areaSize = 512;
+areaSize = 16;
 fireSizeVec = [];
 forest = zeros(areaSize, areaSize);
 plotForest = false;
@@ -61,5 +61,5 @@ if plotGraph
     pbaspect([1 1 1]);
 end
 
-vec512 = [fireSizeVec, yValues]; 
-csvwrite('vec512', vec512); 
+vec16 = [fireSizeVec, yValues]; 
+csvwrite('vec16', vec16); 

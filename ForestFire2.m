@@ -3,7 +3,7 @@ clear all
 clc
 clf
 
-nrFires = 100;
+nrFires = 1000;
 areaSize = 128;
 
 fireSizeVec = [];
@@ -62,3 +62,7 @@ hold on
 loglog(randFireVec, yValues, 'o', 'MarkerSize',2);
 axis equal
 pbaspect([1 1 1]);
+xlabel('relative fire size');
+ylabel('rank');
+title('f = 0.03, p = 0.001, N = 128, nrFires = 1000');
+legend({'natural forest','random forest'},'Location','southwest')
